@@ -183,4 +183,6 @@ link,nn6000-v2)
 esac
 
 uci commit wireless
+uci add_list firewall.@zone[1].network='wwan'
+uci commit firewall
 /etc/init.d/network restart
